@@ -1,28 +1,14 @@
-small = 2
-regular = 5
-big = 6
- 
-user_budget = input('Hur mycket pengar kan du använda? ')
- 
-try:
-   user_budget = int(user_budget)
-except:
-   print('Skriv ett numeriskt värde!')
-   exit()
- 
-if user_budget > 0:
-   if user_budget >= big:
-       print('Du har råd med en stor kaffe.')
-       if user_budget == big:
-           print('Det är precis.')
-       else:
-           print('Din växel blir ', user_budget - big)
-   elif user_budget == regular:
-       print('Du har råd med en normal kaffe.')
-       print('Det är precis.')
-   elif user_budget >= small:
-       print('Du har råd med en normal kaffe.')
-       if user_budget == small:
-           print('Det är precis.')
-       else:
-           print('Din växel blir ', user_budget - small)
+import cafe, oopcafe
+
+val = input("Välj 1 för funktionellt programmerat café. Välj 2 för objektorienterat programmerat café. Välj 0 för att avsluta. Vad vill du göra:")
+
+while val!="0":
+  
+  if(val=="1"):
+    cafe.FunctionalCafe()
+  elif(val=="2"):
+    oopcafe.OopCafe()
+  elif(val=="0"):
+    exit
+
+  val = input("Välj 1 för funktionellt programmerat café. Välj 2 för objektorienterat programmerat café. Välj 0 för att avsluta. Vad vill du göra:")
